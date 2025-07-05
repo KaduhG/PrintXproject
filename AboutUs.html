@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Codes/style.css">
+
+<style>
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        top: 0;
+        left: 0;
+    }
+
+    .about-box {
+        max-width: 900px;
+        max-height: 400px;
+        margin: 120px auto 60px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        display: flex;
+        overflow: hidden;
+    }
+
+    .about-box .image-side {
+        flex: 1 1 50%;
+    }
+
+    .about-box .image-side img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-box .text-side {
+        flex: 1 1 50%;
+        padding: 40px;
+        box-sizing: border-box;
+        font-family: 'Courgette', cursive;
+    }
+
+    .about-box .text-side h2 {
+        font-family: 'Viga', sans-serif;
+        text-align: center;
+        font-size: 34px;
+        color: #165faa;
+        margin: 0;
+    }
+
+    .about-box .text-side p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .color-bar {
+        display: flex;
+        height: 6px;
+        margin-top: 30px;
+    }
+
+    .color-bar div {
+        flex: 1;
+    }
+
+    .color-bar .cyan { background: #00FFFF; }
+    .color-bar .magenta { background: #FF00FF; }
+    .color-bar .yellow { background: #FFFF00; }
+    .color-bar .black { background: #000000; }
+
+    .contact-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+
+    .contact-left {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-left: 5px solid #2b6aa0;
+        padding-left: 20px;
+        
+    }
+
+    .contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .contact-row i {
+        font-size: 26px;
+        color: #2b6aa0;
+        margin-top: 5px;
+    }
+
+    .contact-row h4 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .contact-row p {
+        margin: 5px 0 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .contact-map {
+        flex: 1;
+        min-width: 300px;
+        height: 320px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        
+    }
+</style>
+</head>
+
+<body>
+
+    <header>
+        <img src="../Assets/Print-Xbanner.png" alt="Logo" style="height: 60px;margin-left: 15%;" />
+        
+        <ul>
+            <li><a href="../Codes/Print-X.html">Products</a></li>
+            <li><a href="../Codes/AboutUs.html" class="active">About Us</a></li>
+            <li class="cart-dropdown">
+                <a href="../Codes/Cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" class="cart-icon" />
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Codes/ViewInvoice.html">View Invoice</a></li>
+                    <li><a href="../Codes/Cart.html">View Cart</a></li>
+                    <li><a href="../Codes/Checkout.html">Checkout</a></li>
+                </ul>
+            </li>
+            
+            <li><a id="loginstatus" href="../Codes/Login.html"><button class="button1">Login</button></a></li>
+
+        </ul>
+    </header>
+
+      
+    <div class="about-box" id="about">
+        <div class="image-side">
+          <img src="https://image.rolanddga.com/-/media/roland/images/industry/promotional-products/sublimationsapplications.jpg?rev=2b15b1c9b5ce442990d2a221d5f3e147&la=en&h=533&w=800&hash=39AC013B87CA703C7DC43DF63D4F5F18" alt="Printing Products">
+        </div>
+      
+        <div class="text-side">
+          <h2>About Us</h2>
+          <p>We are a local Jamaican printery, serving the people of Westmoreland since 2003. We specialize in producing high-quality printed materials such as business cards, t-shirts andd signs all customized to your needs.</p>
+      
+          <p>Our mission is to make professional printing simple and affordable. With our creative designs, we help bring your ideas to life on paper, fabric or and metal.</p>
+      
+          <div class="color-bar">
+            <div class="cyan"></div>
+            <div class="magenta"></div>
+            <div class="yellow"></div>
+            <div class="black"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- This section shows the contact details on the left and a map of the location on the right-->
+      <section class="contact-section">
+        <div class="contact-left">
+          <div class="contact-row">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Call Us</h4>
+              <p>(876) 456-7890<br>(876) 123-4567</p>
+            </div>
+          </div>
+      
+          <div class="contact-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Visit Us</h4>
+              <p>Westmoreland, Jamaica</p>
+            </div>
+          </div>
+      
+          <div class="contact-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:printxstore@email.com">printxstore@email.com</a></p>
+            </div>
+          </div>
+      
+          <div class="contact-row">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>(876) 111-1111</p>
+            </div>
+          </div>
+      
+          <div class="contact-row">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Mon–Sat: 8:30AM – 4PM</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="contact-map">
+            <!--Interactive map showing Print-X's location -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d599.7382039943165!2d-78.1307044!3d18.2251112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ed96fdc0f892393%3A0x8ec6867ce9592c5d!2sPrint%20X!5e0!3m2!1sen!2sjm!4v1720142467534!5m2!1sen!2sjm"
+            width="100%" 
+            height="100%" 
+            style="border:0;"
+            allowfullscreen="" 
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+      
+      <script>
+        //Checks if the user is logged in
+        const loginStatusBtn = document.getElementById("loginstatus");
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      
+        // If user is logged in show the optioon to log out
+        if (loggedInUser) {
+          loginStatusBtn.textContent = "Log Out";
+          loginStatusBtn.href = "#";
+          loginStatusBtn.className = "button1";
+          loginStatusBtn.addEventListener("click", function (e) {
+
+            e.preventDefault(); // Stop link from reloading
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+
+          });
+        } else {
+          // If not logged in show the Login option
+          loginStatusBtn.textContent = "Login";
+          loginStatusBtn.className = "button1";
+          loginStatusBtn.href = "../Codes/Login.html";
+        }
+      </script>      
+      
+</body>
+</html>
