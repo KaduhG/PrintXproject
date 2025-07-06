@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Products</title>
+		<link rel="stylesheet" href="../Codes/style.css">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		
+		.card-wrapper {
+			padding: 40px;
+			background-color: #f7f7f7;
+		}
+
+		.product-grid {
+			max-width: 1000px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+		}
+
+		/* Container for each product showing their image and details*/
+		.product-card {
+			background: #fff;
+			border-radius: 10px;
+			overflow: hidden;
+			padding-bottom: 25px; 
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			transition: transform 0.3s ease;
+		}
+
+		.product-card:hover {
+			transform: translateY(-8px);
+		}
+
+		.product-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			display: block;
+			margin: 0;
+			padding: 0;
+			border-radius: 0;
+		}
+
+		.product-card h2 {
+			color: #2b6aa0;
+			font-size: 22px;
+			font-weight: 200;
+			margin: 15px 0;
+		}
+
+		.product-card p {
+			color: #3b3b3b;
+			font-size: 14px;
+			margin: 5px 0;
+		}
+
+		.product-card b {
+			color: #2b6aa0;
+			font-family: 'Viga', sans-serif;
+		}
+		.products {
+			position: fixed;
+			top: 80px;
+			left: 20px;
+			z-index: 11;
+		}
+
+		.products-btn {
+			background-color: #469be1;
+			color: white;
+			padding: 10px 20px;
+			font-weight: 600;
+			border:none;
+			margin-top: 20px;
+			border-radius: 6px;
+			cursor: pointer;
+			letter-spacing: 0.05em;
+		}
+
+		.products:hover .products-menu,
+		.products-menu:hover {
+			display: block;
+		}
+
+		.products-menu {
+			display: none;
+			position: absolute;
+			top: 42px;
+			left: 0;
+			background-color: #ffffff;
+			min-width: 140px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+			padding: 10px 0;
+			border-radius: 8px;
+			font-family: 'Viga', sans-serif;
+			font-size: 14px;
+		}
+
+		.products-menu li {
+			list-style: none;
+		}
+
+		.products-menu li a {
+			display: block;
+			padding: 10px 20px;
+			text-decoration: none;
+			color: #333;
+		}
+
+		.products-menu li a:hover {
+			background-color: #f0f0f0;
+			color: #007bff;
+		}
+
+		.products-dropdown:hover .products-menu {
+			display: block;
+		}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<img src="../Assets/Print-Xbanner.png" alt="Logo" style="height: 60px;margin-left: 15%;" />
+			
+				<ul>
+						<li><a href="../Codes/index.html" class="active">Products</a></li>
+						<li><a href="../Codes/AboutUs.html">About Us</a></li>
+						<li class="cart-dropdown">
+							<a href="../Codes/Cart.html">
+								<img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" class="cart-icon" />
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="../Codes/Invoice.html">View Invoice</a></li>
+								<li><a href="../Codes/Cart.html">View Cart</a></li>
+								<li><a href="../Codes/Checkout.html">Checkout</a></li>
+							</ul>
+						</li>
+					
+						<li><a id="loginstatus" href="../Codes/Login.html"><button class="button1">Login</button></a></li>
+					</ul>
+					
+			</header>
+
+			<div class="products">
+				<button class="products-btn">Products</button>
+				<ul class="products-menu">
+					<li><a href="#row1">Business Cards</a></li>
+					<li><a href="#row1">Programmes</a></li>
+					<li><a href="#row1">Flyers/Posters</a></li>
+					<li><a href="#row2">Labels/Stickers</a></li>
+					<li><a href="#row2">Tickets</a></li>
+					<li><a href="#row2">Receipt Books</a></li>
+					<li><a href="#row3">Custom T-Shirts</a></li>
+					<li><a href="#row3">Buttons</a></li>
+					<li><a href="#row3">Vinyls</a></li>
+					<li><a href="#row4">Banners</a></li>
+					<li><a href="#row4">Stamps & Seals</a></li>
+					<li><a href="#row4">Signs</a></li>
+				</ul>
+			</div>
+			
+
+		<section class="hero">
+			<div style="position: relative; z-index: 1;">
+				<p style="font-family: 'Great Vibes', cursive; font-size: 3em;">"For All Your Printing Needs"</p>
+			</div>
+		
+			<!-- Used to add a wave below the hero picture -->
+			<svg viewBox="0 0 1440 320" preserveAspectRatio="none" style="position:absolute; bottom:0; left:0; width:100%; height:100px; z-index:1;">
+				<path fill="#f7f7f7" d="M0,280 C360,40 1080,480 1440,160 L1440,320 L0,320 Z"></path>
+			</svg>
+		</section>
+
+		<h1 id="row1"> Products</h1>
+		
+		<div class="card-wrapper">
+				<div class="product-grid">
+			
+					<div class="product-card">
+						<img src="https://i.etsystatic.com/11215820/r/il/c2bb10/1005055933/il_570xN.1005055933_cbkl.jpg">
+						<h2>Business Cards</h2>
+						<p><b>Starting Price:</b> $2,200 JMD</p>
+						<p><b>Minimum:</b> 50</p>
+						<p><b>Size:</b> 3.5" x 2"</p>
+						<p><b>Material:</b> 10-point paper</p>
+						<a target="_blank" id="row2" href="../Codes/Form.html"><button>Add</button></a>
+					</div>
+
+					<div class="product-card">
+						<img src="https://i.etsystatic.com/12294963/r/il/821291/1694644026/il_570xN.1694644026_ro4i.jpg">
+						<h2>Programmes</h2>
+						<p><b>Starting Price:</b> $7,500 JMD</p>
+						<p><b>Minimum:</b> 50</p>
+						<p><b>Size:</b> 4" x 11"</p>
+						<p><b>Material:</b> Thick glossy paper</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://eadn-wc02-2089561.nxedge.io/cdn/media/catalog/product/cache/de88093357d11832c3cd2895a4184815/c/o/color-copies-v1_2.png">
+						<h2>Flyers/Posters</h2>
+						<p><b>Starting Price:</b> $1,500 JMD</p>
+						<p><b>Minimum:</b> 10</p>
+						<p><b>Size:</b> 8.5" x 11"</p>
+						<p><b>Material:</b> Thin Glossy paper</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://splus-assets.pnimedia.com/dynamic/en-US/CustomLabelsStickers_ComputerLabels/thumb?v=fd0b072c3e613aa1">
+						<h2>Labels & Stickers</h2>
+						<p><b>Starting Price:</b> $2,100 JMD</p>
+						<p><b>Minimum:</b> 100</p>
+						<p><b>Size:</b> 1 Label < 8.5" x 11"</p>
+						<p><b>Material:</b> Crack & Peel paper</p>
+						<a target="_blank" id="row3" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://www.gleeprinting.ph/content/images/thumbs/0002090_tickets.png">
+						<h2>Tickets</h2>
+						<p><b>Starting Price:</b> $4,500 JMD</p>
+						<p><b>Minimum:</b> 100</p>
+						<p><b>Size:</b> 6" x 2.5"</p>
+						<p><b>Material:</b> Cardstock</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://m.media-amazon.com/images/I/61fDuHFkxxL._AC_UF350,350_QL80_.jpg">
+						<h2>Receipt Books</h2>
+						<p><b>Starting Price:</b> $16,000 JMD</p>
+						<p><b>Minimum:</b> 2</p>
+						<p><b>Size:</b> 3.5" x 2"</p>
+						<p><b>Material:</b> NCR Carbonless paper</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+
+					<div class="product-card">
+						<img src="https://embroly.com/cdn/shop/files/Custom-Embroidery-T-Shirts_1200x.jpg?v=1744604390">
+						<h2>Custom T-Shirts</h2>
+						<p><b>Starting Price:</b> $2,600 JMD</p>
+						<p><b>Minimum:</b> 3 </p>
+						<p><b>Size:</b> S, M, L and XL</p>
+						<p><b>Material:</b> Cotton/Polyester</p>
+						<a target="_blank" id="row4" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://disciplepress.com/wp-content/uploads/2023/07/MB-1008.jpg">
+						<h2>Buttons</h2>
+						<p><b>Starting Price:</b> $1,000 JMD</p>
+						<p><b>Minimum:</b> 10</p>
+						<p><b>Size:</b> 3" Diameter</p>
+						<p><b>Material:</b> Stainless Steel</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://media.karousell.com/media/photos/products/2023/10/12/vinyl_decal_sticker_1697094024_7a2a1d78_progressive.jpg">
+						<h2>Vinyls/Cut-Vinyls</h2>
+						<p><b>Starting Price:</b> $2,800 JMD</p>
+						<p><b>Minimum:</b> 1</p>
+						<p><b>Size:</b> From 5" x 5" up</p>
+						<p><b>Material:</b> Adhesive Vinyl</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://dqj17tese79do.cloudfront.net/acmesigns/images/product/Custom-PVC-Banner-Printing-Services-in-Orlando-Florida.jpg">
+						<h2>Banners</h2>
+						<p><b>Starting Price:</b> $3,000 JMD</p>
+						<p><b>Minimum:</b> 1</p>
+						<p><b>Size:</b> 40" x 40" up</p>
+						<p><b>Material:</b> Canvas</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://5.imimg.com/data5/SELLER/Default/2021/2/ID/OI/SI/5898726/a-v-trading-co-dwarka-delhi-rubber-stamp-manufacturers-kfaxh-500x500.jpg">
+						<h2>Stamps & Seals</h2>
+						<p><b>Starting Price:</b> $4,000 JMD</p>
+						<p><b>Minimum:</b> 1</p>
+						<p><b>Size:</b> #20, #30, #40, #50 stamps and seals</p>
+						<p><b>Material:</b> Self-Inking Rubber Stamp</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+					<div class="product-card">
+						<img src="https://www.nextdaysignscols.com/wp-content/gallery/yard-signs/JM-Construction.JPG">
+						<h2>Signs</h2>
+						<p><b>Starting Price:</b> $6,100 JMD</p>
+						<p><b>Minimum:</b> 1</p>
+						<p><b>Size:</b> 40" x 40" up</p>
+						<p><b>Material:</b> Vinyl and Steel</p>
+						<a target="_blank" href="../Codes/Form.html"><button>ADD</button></a>
+					</div>
+			
+				</div>
+			</div>
+				
+			<!-- Showing fav icons and conatct information of Print-X -->
+			<footer>
+				<p><i class="fas fa-map-marker-alt"></i> Wes J's Uptown Mall, Savanna-Lar, Westmoreland, Jamaica</p>
+				<p><i class="fas fa-envelope"></i> <a href="mailto:printxstore@email.com">printxstore@email.com</a></p>
+				<p><i class="fas fa-phone"></i> 876-123-4567</p>
+			</footer>
+	</body>
+</html>
+			

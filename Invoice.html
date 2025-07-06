@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Invoice</title>
+		<link rel="stylesheet" href="../Codes/style.css">
+	 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+	 <meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+     <style>
+       
+    h2 {
+        font-size: 28px;
+        color: #333;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 10px;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .invoice-box {
+        background-color: #fff;
+        padding: 30px;
+        margin: 100px auto;
+        width: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .invoice-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #333;
+    }
+
+    .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .invoice-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+    .invoice-table th i{
+        background-color: #f2f2f2;
+        font-size:10px;
+        font-weight: bold;
+    }
+
+    .invoice-summary {
+        text-align: left;
+        font-size: 15px;
+        color: #333;
+    }
+
+    .invoice-summary p {
+        margin: 5px 0;
+    }
+
+    .invoice-summary p:last-child {
+        font-weight: bold;
+    }
+
+    .invoice-message {
+        text-align: center;
+        color: red;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    </style>
+</head>
+
+<body>
+		<header style="margin-top: -100px;">
+			<img src="../Assets/Print-Xbanner.png" alt="Logo" style="height: 60px;margin-left: 15%;" />
+			
+				<ul>
+						<li><a href="../Codes/index.html">Products</a></li>
+						<li><a href="../Codes/AboutUs.html">About Us</a></li>
+						<li class="cart-dropdown">
+							<a href="../Codes/Cart.html">
+								<img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" class="cart-icon" />
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="../Codes/Invoice.html">View Invoice</a></li>
+								<li><a href="../Codes/Cart.html">View Cart</a></li>
+								<li><a href="../Codes/Checkout.html">Checkout</a></li>
+							</ul>
+						</li>
+					
+						<li><a id="loginstatus" class="button1" href="../Codes/Login.html">Login</a></li>
+					</ul>
+			</header>
+
+            
+
+        <div class="invoice-box" id="invoiceBox">
+            <h2>INVOICE</h2>
+        <div class="invoice-header">
+            <div class="customer-info" id="customerInfo"><strong>Customer Name:</strong> Kadijah McIntosh<br><strong>Email:</strong> test@gmail.com</div>
+            <div class="invoice-date" id="invoiceDate">Date: 07/05/2025</div>
+        </div>
+
+        <table class="invoice-table" id="invoiceTable">
+            <thead>
+            <tr>
+                <th>Product</th>
+                <th>Size</th>
+                <th>Qty</th>
+                <th>Unit Price <i>$JMD</i></th>
+                <th>Subtotal <i>$JMD</i></th>
+            </tr>
+            </thead>
+            <tbody id="invoiceBody">
+                <tr>
+                    <td>Receipt Books</td>
+                    <td>Standard</td>
+                    <td>2</td>
+                    <td>$8000.00</td>
+                    <td>$16000.00</td>
+                </tr>
+                <tr>
+                    <td>Custom T - Shirts</td>
+                    <td>Medium</td>
+                    <td>3</td>
+                    <td>$867.00</td>
+                    <td>$2600.00</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="invoice-summary" id="invoiceSummary"></div>
+            <p>Subtotal: $18600.00</p>
+            <p>Tax (15%): $2790.00</p>
+            <p><b>Total: JMD$21390.00</b></p>
+        <div class="invoice-message" id="invoiceMessage"></div>
+        </div>
+              
+</body>
+</html>

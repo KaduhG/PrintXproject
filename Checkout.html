@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../Codes/style.css"/>
+
+  <style>
+    
+     .checkout-wrapper {
+      max-width: 700px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #ececec;
+    }
+
+    .checkout-section {
+      margin-bottom: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      font-weight: bold;
+    }
+
+    .form-row div {
+      flex: 1;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 80%;
+      padding: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .delivery-info {
+      display: none;
+      margin-top: 15px;
+    }
+
+    select {
+      padding: 8px;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      background-color: white;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .checkout-btn {
+      padding: 10px 25px;
+      background-color: #10b658;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Viga', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+      background-color: #299761;
+    }
+
+    /* Making all the inputs in delivery same size*/
+    #delivery-fields input,
+    #delivery-fields select {
+        width: 100%;
+        box-sizing: border-box;
+        }
+
+        .clear-btn {
+      padding: 10px 25px;
+      background-color: rgb(212, 83, 83);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Viga', sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .clear-btn:hover {
+      background-color:  rgb(183, 58, 58);
+    }
+    
+    .summary-box p {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 8px 0;
+        color: #333;
+    }
+
+    .summary-box p:last-child {
+        font-size: 23px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .summary-box p:nth-child(1),
+    .summary-box p:nth-child(2) {
+    font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+    <header style="margin-top: -100px;">
+        <img src="../Assets/Print-Xbanner.png" alt="Logo" style="height: 60px;margin-left: 15%;" />
+        <ul>
+          <li><a href="../Codes/index.html">Products</a></li>
+          <li><a href="../Codes/AboutUs.html">About Us</a></li>
+          <li class="cart-dropdown">
+            <a href="../Codes/Cart.html">
+              <img src="https://cdn-icons-png.flaticon.com/512/107/107831.png" class="cart-icon" />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="../Codes/Invoice.html">View Invoice</a></li>
+              <li><a href="../Codes/Cart.html">View Cart</a></li>
+              <li><a href="../Codes/Checkout.html">Checkout</a></li>
+            </ul>
+          </li>
+          <li><a id="loginstatus" href="../Codes/Login.html"><button class="button1">Login</button></a></li>
+        </ul>
+      </header>
+
+      <div class="checkout-wrapper" id="checkout-section">
+                <div class="checkout-section">
+                  <h2>Checkout</h2>
+                  <p><b>Enter card information for <span  style="font-size:20px;">Kadijah McIntosh</span></b></p>
+                </div>
+          
+                <form id="checkout-form" class="checkout-section">
+                  <h3>Payment Information</h3>
+                  <div class="form-row">
+                    <div>
+                      <label for="cardName">Name on Card</label>
+                      <input type="text" id="cardName" required />
+                    </div>
+                    <div>
+                      <label for="cardNumber">Card Number</label>
+                      <input type="number" id="cardNumber" required />
+                    </div>
+                  </div>
+          
+                  <div class="form-row">
+                    <div>
+                      <label for="expiryMonth">Expiry Month</label>
+                      <input type="number" id="expiryMonth" placeholder="MM" required min="1" max="12" />
+                    </div>
+                    <div>
+                      <label for="expiryYear">Expiry Year</label>
+                      <input type="number" id="expiryYear" placeholder="YYYY" required />
+                    </div>
+                    <div>
+                      <label for="cvv">Security Number</label>
+                      <input type="number" id="cvv" placeholder="CVV" required />
+                    </div>
+                  </div>
+          
+                  <div class="checkout-section">
+                    <h3>Order Method</h3>
+                    <div class="radio-group">
+                      <label><input type="radio" name="method" value="pickup"> Pickup (Ready 4 days after)</label>
+                      <label><input type="radio" name="method" value="delivery"> Delivery</label>
+                    </div>
+                    <!-- Opens if the delivery radio button is clicked-->
+                    <div class="delivery-info" id="delivery-fields" style="display: none;">
+                      <input type="text" placeholder="Address Line 1" required />
+                      <input type="text" placeholder="Address Line 2" />
+                      <input type="text" placeholder="City" required />
+                      <select required>
+                        <option value="">Select Parish</option>
+                        <option>Kingston</option>
+                        <option>St. Andrew</option>
+                        <option>St. Catherine</option>
+                        <option>Clarendon</option>
+                        <option>Manchester</option>
+                        <option>St. Elizabeth</option>
+                        <option>Westmoreland</option>
+                        <option>Hanover</option>
+                        <option>St. James</option>
+                        <option>Trelawny</option>
+                        <option>St. Ann</option>
+                        <option>St. Mary</option>
+                        <option>Portland</option>
+                        <option>St. Thomas</option>
+                      </select>
+                    </div>
+                  </div>
+          
+                  <h3>Order Summary</h3>
+                  <table>
+                    <tr><th>Product</th><th>Quantity</th><th>Subtotal</th></tr>
+                    <tr><td>Receipt Books</td><td>2</td><td>$16000.00</td></tr>
+                    <tr><td>Receipt Books</td><td>2</td><td>$2600.00</td></tr>
+                  </table>
+
+                  <div class="summary-box">
+                    <p><b>Subtotal:</b> $18600.00</p>
+                    <p><b>Tax (15%):</b> $2790.00</p>
+                    <p><b>Total:</b> $21390.00</p>
+                  </div>
+
+                  <button class="checkout-btn" type="submit">Confirm and Pay</button>
+                  <a class="clear-btn" href="#">Clear All</a>
+                </form>
+      </div>
+
+</body>
+</html>

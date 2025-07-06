@@ -1,0 +1,180 @@
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Viga', sans-serif;
+    margin:0;
+    font-weight: 200;
+}	
+
+h1 {
+    margin:5% 0 0 0;
+    color:#070751;
+    font-family:'Viga', sans-serif;
+    font-weight:lighter;
+    letter-spacing:0.03em;
+    text-align:center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 38%;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 20px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+header ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+     color: #4285f4;
+}
+
+.active {
+     border-bottom: 2px solid #333; 
+}
+
+.button1 {
+    background-color: #4285f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: bold;
+}
+
+.button1:hover {
+    background-color: #2f6ed3;
+    color:white;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.cart-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 100%;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    font-family: 'Viga', sans-serif;
+    min-width: 100px; 
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    list-style: none;
+    z-index: 999;
+}
+
+.cart-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu li:last-child a {
+    background-color: #28a745;
+  color: white;
+  padding: 9px;
+  display: block;
+  text-align: center;
+  border-radius: 4px;
+  margin-top: 8px; 
+  }
+  
+  /* Hover effect for checkout button */
+  .dropdown-menu li:last-child a:hover {
+    background-color: #218838;
+  }
+
+button {
+    background-color: #10b658;
+    font-family: 'Viga', sans-serif;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #299761;
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    margin-top: 0;
+    padding-top: 80px;
+    background-image: url('https://i1.adis.ws/i/canon/pixma_ts8250_ambient_canoninkandpaper_natasha-alipour-16x9_cecae447360046d59a664646f3d61b6a?$hero-header-half-16by9-dt-jpg$');
+    background-size: cover;
+    background-position: center -100px;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+
+.hero p {
+    font-size: 3em;
+    font-family: 'Great Vibes', cursive;
+}
+footer {
+    background-color: white;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer i {
+    margin-right: 5px;
+}
+footer p {
+    color: black;
+}
